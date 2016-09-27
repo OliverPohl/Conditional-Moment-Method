@@ -4,6 +4,7 @@ An implementation of a computational method, which infers information about chem
 
 
   #################   Conditional Moments    ################################################
+  
 Input: 	 To be found in parameters.py . Essentially data tracks, \Delta t and conditions.
 Methods: To be found in conditional_moments.py, which uses data_processing.py . In short, data is processed (data_processing.py) and the moments are calculated
 Output:  array "experimental_moments_tensor" gives moments conditioned on conditions (specified in parameters.py) 
@@ -16,6 +17,7 @@ Examples:
   
   
   ####################   Parameter inference    ###############################################
+  
 Input: 	 Experimental_moments_tensor, \Delta t, which_moments, i.e., the moments to be used for inference 
 Methods: To be found in parameter_inference.py, which uses optimization.py. 
 	 For the angular case treated here parameter_inference uses angular_moments.py.
@@ -32,6 +34,7 @@ Output:  Array "inferred_parameter_tensor" give inferred model parameters condit
 	 
 	 
   ################ Tumble recognizer ######################
+  
 Input:     	Inferred model parameters (specified in parameters.py), desired alpha_error, test_data
 Methods: 	To be found in tumble_recognizer, which also uses data processing to define the stochastic process under consideration.
 Functionality:  Likelihood ratio R is used to determine whether a turning angle is due to a tumbling event or Brownian noise. 
